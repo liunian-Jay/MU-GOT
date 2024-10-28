@@ -1,0 +1,22 @@
+{
+    "bucket_info": {
+        "bucket-name-1": [
+            "ak",
+            "sk",
+            "endpoint"
+        ],
+        "bucket-name-2": [
+            "ak",
+            "sk",
+            "endpoint"
+        ]
+    },
+    "models-dir": "你的目录xxxxx/MinerU-models",
+    "layoutreader-model-dir": "你的目录xxxxx/layoutreader",
+    "device-mode": "cuda",
+    "table-config": {
+        "model": "TableMaster",
+        "is_table_recog_enable": false,
+        "max_time": 400
+    }
+}

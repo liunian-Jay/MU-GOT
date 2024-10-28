@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: GOT
+Version: 0.1.0
+Summary: Towards OCR-2.0.
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: markdown2[all]
+Requires-Dist: numpy
+Requires-Dist: requests
+Requires-Dist: sentencepiece
+Requires-Dist: tokenizers>=0.15.2
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: wandb
+Requires-Dist: shortuuid
+Requires-Dist: httpx==0.27.2
+Requires-Dist: deepspeed==0.12.3
+Requires-Dist: peft==0.4.0
+Requires-Dist: albumentations
+Requires-Dist: opencv-python
+Requires-Dist: tiktoken>=0.6.0
+Requires-Dist: accelerate==0.28.0
+Requires-Dist: bitsandbytes==0.41.0
+Requires-Dist: scikit-learn==1.2.2
+Requires-Dist: einops==0.6.1
+Requires-Dist: einops-exts==0.0.4
+Requires-Dist: timm

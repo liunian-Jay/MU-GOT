@@ -1,0 +1,15 @@
+config:
+  device: cpu
+  layout: True
+  formula: True
+  table_config:
+    model: TableMaster
+    is_table_recog_enable: False
+    max_time: 400
+
+weights:
+  layout: Layout/model_final.pth
+  mfd: MFD/weights.pt
+  mfr: MFR/UniMERNet
+  struct_eqtable: TabRec/StructEqTable
+  TableMaster: TabRec/TableMaster
