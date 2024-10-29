@@ -10,10 +10,6 @@ from GOT.model import Qwen2GotForCausalLM
 # from GOT.model import GOTQwenForCausalLM # 无vllm加速原版
 ModelRegistry.register_model("Qwen2GotForCausalLM", Qwen2GotForCausalLM)
 
-from .pdf2md import pdf2md
-from .pic2tab import vllm_got
-from .process_markdown import .process_markdown
-
 
 
 def init_model_GOT(model_name="你的目录"):
