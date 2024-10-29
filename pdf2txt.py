@@ -1,5 +1,6 @@
-from PDF_parsing import pdf2md, vllm_got, process_markdown
-
+from PDF_parsing.pdf2md import pdf2md
+from PDF_parsing.pic2tab import vllm_got
+from PDF_parsing.process_markdown import process_markdown
 
 def pdf2md_api(doc_file) ->tuple[str,dict[str,bytes]]:
     """ MinerU识别 """
