@@ -21,6 +21,7 @@ GOT/eval/pyevaltools/eval_ocr_scene.py
 GOT/eval/pyevaltools/merge_results.py
 GOT/model/GOT_ocr_2_0.py
 GOT/model/__init__.py
+GOT/model/modeling_GOT_vllm.py
 GOT/model/plug/blip_process.py
 GOT/model/vision_encoder/__init__.py
 GOT/model/vision_encoder/vary_b.py

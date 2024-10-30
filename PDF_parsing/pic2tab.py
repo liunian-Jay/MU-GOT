@@ -154,7 +154,7 @@ def vllm_got(image_list, type='format'):
     keywords = [stop_str]
     keyword_ids = [tokenizer(keyword).input_ids for keyword in keywords]
     new_keyword_ids = [keyword_id[0] for keyword_id in keyword_ids]
-    sampling_param = SamplingParams(temperature=0.7, top_p=0.8, repetition_penalty=1.25, max_tokens=2048, stop_token_ids = new_keyword_ids)
+    sampling_param = SamplingParams(temperature=0.0, top_p=0.8, repetition_penalty=1.0, max_tokens=2048, stop_token_ids = new_keyword_ids)
 
     # stopping_criteria = KeywordsStoppingCriteria(keywords, tokenizer, input_ids)
     with torch.autocast("cuda", dtype=torch.bfloat16):
@@ -178,13 +178,14 @@ def vllm_got(image_list, type='format'):
 
 
 
-# if __name__ == '__main__':
-#     import time
-#     start = time.time()
-#     image_list = [
-#         'xxxxxx.jpg'
-#     ]          
-#     res = vllm_got(image_list)
-#     print()
-#     end = time.time()
-#     print(f"Time cost: {end-start:.3f} seconds")
+if __name__ == '__main__':
+    import time
+    start = time.time()
+    image_list = [
+        '/home/jbli/project/pdf/output/images/0cb040acbb49b0992f5bd3591c98e83c199d74815b8759ca88e5bcb70b5846e4.jpg',
+        # 'xxxxxx.jpg'
+    ]          
+    res = vllm_got(image_list)
+    print()
+    end = time.time()
+    print(f"Time cost: {end-start:.3f} seconds")

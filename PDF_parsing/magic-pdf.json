@@ -11,8 +11,8 @@
             "endpoint"
         ]
     },
-    "models-dir": "你的目录xxxxx/MinerU-models",
-    "layoutreader-model-dir": "你的目录xxxxx/layoutreader",
+    "models-dir": "你的路径/MinerU-models",
+    "layoutreader-model-dir": "你的路径/layoutreader",
     "device-mode": "cuda",
     "table-config": {
         "model": "TableMaster",

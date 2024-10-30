@@ -1,3 +1,25 @@
+**/__pycache__/
+**/*.out
+**/*.html
+**/*.pkl
+**/*.npy
+**/*.npz
+**/*.ckpt
+**/*.DS_Store
+**/*.zip
+**/*.tar
+**/*.nii
+**/*.gz
+**/*.pth
+**/*.svn
+**/*.hg
+**/*.crdownload
+**/*.log
+**/CVS
+**/Thumbs.db
+**/*.pyc
+**/*.egg-info/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
