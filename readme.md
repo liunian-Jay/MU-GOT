@@ -15,7 +15,7 @@
 或直接安装新环境```conda env create -f environment.yml```
 ### 项目安装：
 进入项目根目录，执行 ```pip install -e .``` 安装, 其会自动安装MinerU和GOT-OCR2.0所依赖的库
-### 需要把PDF_parsing/magic-pdf.json的模型路径替换成你的路径,PDF_parsing/__init__.py需同样替换
+#### 需要把PDF_parsing/magic-pdf.json的模型路径替换成你的路径,PDF_parsing/__init__.py需同样替换
 
 
 ### 尚待改进

@@ -136,7 +136,7 @@ class KeywordsStoppingCriteria(StoppingCriteria):
         self.start_len = None
         self.input_ids = input_ids
 
-        # TODO: 添加 by JiangYi
+        # TODO: 添加 by YiJiang
         self.stopped = [False] * input_ids.size(0)  # 跟踪每个样本是否已经停止
         # self.eos_token_id = tokenizer.eos_token_id
         self.pad_token_id = tokenizer.pad_token_id
@@ -158,7 +158,7 @@ class KeywordsStoppingCriteria(StoppingCriteria):
         # return False
 
 
-        # TODO: 修改 by JiangYi
+        # TODO: 修改 by YiJiang
         if self.start_len is None:
             self.start_len = self.input_ids.shape[1]
         # 遍历批次中的每个样本，检查是否生成结束

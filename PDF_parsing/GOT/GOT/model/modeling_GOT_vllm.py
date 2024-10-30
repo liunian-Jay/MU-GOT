@@ -314,7 +314,7 @@ class Qwen2GOTModel(Qwen2Model):
         
         inputs_embeds = self.embed_tokens(input_ids).cuda()
         if inputs_embeds is not None:
-            print('xxxx:', inputs_embeds.shape)
+            print('inputs_embeds.shape:', inputs_embeds.shape)
 
         vision_tower_high = getattr(self, 'vision_tower_high', None)
         if vision_tower_high is not None and images is not None:
