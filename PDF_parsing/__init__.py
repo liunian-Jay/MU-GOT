@@ -15,7 +15,7 @@ ModelRegistry.register_model("Qwen2GotForCausalLM", Qwen2GotForCausalLM)
 
 
 
-def init_model_GOT(model_name="你的目录/project/pdf/vllm_GOT-OCR2_0"):
+def init_model_GOT(model_name="你的目录share/GOT-OCR2_0"):
     """ 初始化并加载模型，输入参数为模型权重路径 """
     # 禁用 torch 的一些初始化设置
     disable_torch_init()

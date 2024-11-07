@@ -159,7 +159,7 @@ def vllm_got(image_list, type='format'):
         temperature=0.0,
         top_p=0.9,
         top_k=50,
-        repetition_penalty=1,
+        repetition_penalty=1.0,
         max_tokens=2048, 
         stop_token_ids = new_keyword_ids
     )
@@ -178,8 +178,11 @@ def vllm_got(image_list, type='format'):
             sampling_params = sampling_param
         )
         generated_text = ""
+        print(len(output_ids))
+        # for i in output_ids:
+        #     print(i.outputs[0].text)
+        #     print('-'*100,'\n\n')
         for o in output_ids:
-            print('-'*100,'\n\n')
             generated_text += o.outputs[0].text
 
     return generated_text
@@ -189,11 +192,49 @@ def vllm_got(image_list, type='format'):
 if __name__ == '__main__':
     import time
     start = time.time()
+    dir = '你的目录share/images'
     image_list = [
-        '你的目录/project/pdf/output/images/0cb040acbb49b0992f5bd3591c98e83c199d74815b8759ca88e5bcb70b5846e4.jpg',
-        # 'xxxxxx.jpg'
+        '你的目录share/images/1.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/4.jpg',
+        '你的目录share/images/1.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/4.jpg',
+        '你的目录share/images/1.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/4.jpg',
+        '你的目录share/images/1.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/4.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/1.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/4.jpg',
+        '你的目录share/images/1.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/4.jpg',
+        '你的目录share/images/1.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/4.jpg',
+        '你的目录share/images/1.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/4.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/3.jpg',
+        '你的目录share/images/3.jpg'
     ]          
     res = vllm_got(image_list)
-    print(res)
     end = time.time()
     print(f"Time cost: {end-start:.3f} seconds")

@@ -233,6 +233,7 @@ class Qwen2GOTModel(Qwen2Model):
         image_features = []
         for image in images:
             image = image.unsqueeze(0)
+            print('xxxx',image.shape) # [1,3,1024,1024]
             P, C, H, W = image.shape
             if P == 1:
                 with torch.set_grad_enabled(False):
@@ -292,7 +293,7 @@ class Qwen2GOTModel(Qwen2Model):
         # 修改 By YiJiang
         if inputs_embeds.dim() == 3:
             B, N, D = inputs_embeds.shape
-            inputs_embeds = inputs_embeds.permute(1, 0, 2).reshape(N * B, D)
+            inputs_embeds = inputs_embeds.reshape(N * B, D)
             print('inputs_embeds -------',inputs_embeds.shape)
 
         return inputs_embeds
@@ -307,14 +308,15 @@ class Qwen2GOTModel(Qwen2Model):
         intermediate_tensors: Optional[IntermediateTensors] = None,
         **kwargs: object,
     ) -> Tensor:
+   
         images = kwargs.pop("images", None)
-        print(input_ids.shape)
-        if images is not None:
-            print(images.shape)
-        
+        # print(input_ids.shape)
         inputs_embeds = self.embed_tokens(input_ids).cuda()
-        if inputs_embeds is not None:
+        
+        if images is not None:
+            print('\nimages.shape',images.shape)
             print('inputs_embeds.shape:', inputs_embeds.shape)
+      
 
         vision_tower_high = getattr(self, 'vision_tower_high', None)
         if vision_tower_high is not None and images is not None:
@@ -349,6 +351,7 @@ def mm_input_mapper_for_qwen2_got(
         ctx: InputContext,
         data: MultiModalData[object],
     ) -> MultiModalInputs:
+    # print('xxxxxxxxxxxx', data.shape)
     model_config = ctx.model_config
     batch_data = {"images": data}
     return MultiModalInputs(batch_data)
