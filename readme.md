@@ -19,7 +19,7 @@
 ### 项目安装：
 进入项目根目录，执行 ```pip install -e .``` 安装, 其会自动安装MinerU和GOT-OCR2.0所依赖的库
 #### 需要把PDF_parsing/magic-pdf.json的模型路径替换成你的路径,PDF_parsing/__init__.py需同样替换
-
+#### 模型是重写了名字，所以模型权重目录中的config中的模型名称需要改为Qwen2GotForCausalLM
 
 ### 尚待改进
 - ~~vllm版本的GOT 输入为batch时候生成的不说人话~~
