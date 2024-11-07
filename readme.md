@@ -2,6 +2,9 @@
 ## 本项目基于MinerU和GOT-OCR2.0 实现pdf解析
 ### 本项目仅为学习交流, 欢迎大家对不合适的地方改进
 请大家关注[GOT](https://github.com/Ucas-HaoranWei/GOT-OCR2.0),[MinerU](https://github.com/opendatalab/MinerU)
+
+🔥 2024/11/7 debug 修复了batch推理不说人话，vllm batch推理吐token的速度自测几个case可以提升数倍
+
 + 本项目主要修改:
   + vllm 0.5.3版本实现了GOT加速
   + 去除了MinerU的本地文件存储，直接用变量传递
@@ -19,6 +22,6 @@
 
 
 ### 尚待改进
-- vllm版本的GOT 输入为batch时候生成的不说人话
+- ~~vllm版本的GOT 输入为batch时候生成的不说人话~~
 - 最后生成的text不是纯markdown, GOT-OCR2.0将表格转为了latex, 所以最后生成的是markdown格式和latex表格的混合
 
